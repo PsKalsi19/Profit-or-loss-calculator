@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stock Profile | Mark-14</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="navigation container">
+      <span class="nav-brand"> I'm Prabhjot </span>
+      <ul class="list-non-bullet nav-pills">
+        <li class="list-item-inline">
+          <a
+            target="_blank"
+            class="link"
+            href="https://prabhjot-neog-portfolio.netlify.app/"
+            >Portfolio</a
+          >
+        </li>
+        <li class="list-item-inline">
+          <a
+            target="_blank"
+            class="link"
+            href="https://github.com/PsKalsi19/Profit-or-loss-calculator"
+            >View Code</a
+          >
+        </li>
+      </ul>
+    </nav>
+    <header class="hero">
+      <img class="hero-img" alt="hero-img" src="hero.svg" />
+      <h1 class="hero-heading hero-heading-highlight">
+        Stock Profile & Loss Calculator
+      </h1>
+      <h3 class="hero-subheading">
+        Enter your stock information and we'll tell you whether you made a
+        <span class="profit-text">Profit</span> or
+        <span class="loss-text">lost money</span>.
+      </h3>
+    </header>
+    <div class="container container-center">
+      <div class="number-wrapper">
+        <div class="label-div">
+          <label class="label" for="initial-price"> Initial Price</label>
+        </div>
+        <input
+          placeholder="enter initial price"
+          id="initial-price"
+          class="input-field"
+          min="0"
+          type="number"
+        />
+      </div>
+      <div class="number-wrapper">
+        <div class="label-div">
+          <label class="label" for="quantity"> Quantity</label>
+        </div>
+        <input
+          placeholder="enter quantity"
+          id="quantity"
+          class="input-field"
+          min="0"
+          type="number"
+        />
+      </div>
+      <div class="number-wrapper">
+        <div class="label-div">
+          <label class="label" for="current-price"> Current Price</label>
+        </div>
+        <input
+          placeholder="enter curent price"
+          id="current-price"
+          class="input-field"
+          min="0"
+          type="number"
+        />
+      </div>
+      <div id="error" class="section-error"></div>
+      <div class="button-wrapper">
+        <section class="section">
+          <button id="submit-button" class="btn btn-primary">Submit</button>
+        </section>
+      </div>
+      <section class="section">
+        <p class="output-note">Your result will be shown below 👇</p>
+        <div class="output-container">
+          <p id="result"></p>
+        </div>
+      </section>
+    </div>
+    <footer class="footer">
+      <p class="footer-header">We can connect on:</p>
+      <ul class="social-links list-non-bullet">
+        <li class="list-item-inline">
+          <a class="link" href="https://github.com/PsKalsi19">Github</a>
+        </li>
+        <li class="list-item-inline">
+          <a
+            class="link"
+            href="https://www.linkedin.com/in/prabhjot-kalsi-8390a6240/"
+            >Linkedin</a
+          >
+        </li>
+        <li class="list-item-inline">
+          <a class="link" href="https://twitter.com/kalamaurcode">Twitter</a>
+        </li>
+      </ul>
+    </footer>
+    <script src="/script.js"></script>
+  </body>
+</html>
