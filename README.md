@@ -5,6 +5,10 @@
 
 Used Javascript to build logic around how profit and loss app can be created and how small building block can lead to clean and better code.
 
+> Learnings
+- Clean coding.
+- Erro handling.
+
 > Bonus Work
 - Limit the Decimal points to 2 digits.
 - Do not allow user to add text, only allow numbers.
