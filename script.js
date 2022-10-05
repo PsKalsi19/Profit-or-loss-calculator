@@ -22,6 +22,11 @@ function verifyInputs() {
     setError('All Fields are required')
     return false
   }
+
+  if (quantity.value < 1) {
+    setError('Please enter valid quantity.')
+    return false;
+  }
   // else if (Number(input.value) <= 0) {
   //   setError('Input invalid, please provide positive integers.')
   //   return false
