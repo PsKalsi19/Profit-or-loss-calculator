@@ -38,13 +38,13 @@ function verifyInputs() {
 function calculateProfitAndLoss(initPrice, currPrice, quant) {
   if (initPrice > currPrice) {
     const lossAmount = loss(initPrice, currPrice, quant)
-    const lossPercent = lossPercentage(lossAmount, currPrice)
+    const lossPercent = lossPercentage(lossAmount, initPrice)
     setOutput(`Sorry, you are in loss of amount ${lossAmount} which is ${lossPercent}%`);
     changeBodyColor(lossColor)
   }
   else if (currPrice > initPrice) {
     const profitAmount = profit(initPrice, currPrice, quant)
-    const profitPercent = profitPercentage(profitAmount, currPrice)
+    const profitPercent = profitPercentage(profitAmount, initPrice)
     setOutput(`Hey, you've gained profit of amount ${profitAmount} which is ${profitPercent}%`)
     changeBodyColor(profitColor)
   }
@@ -58,16 +58,16 @@ function profit(initPrice, currPrice, quant) {
   return (currPrice - initPrice) * quant
 }
 
-function profitPercentage(profit, currPrice) {
-  return ((profit / currPrice) * 100).toFixed(2)
+function profitPercentage(profit, initPrice) {
+  return ((profit / initPrice) * 100).toFixed(2)
 }
 
 function loss(initPrice, currPrice, quant) {
   return (initPrice - currPrice) * quant
 }
 
-function lossPercentage(loss, currPrice) {
-  return ((loss / currPrice) * 100).toFixed(2)
+function lossPercentage(loss, initPrice) {
+  return ((loss / initPrice) * 100).toFixed(2)
 }
 // hide and show functions
 function setError(errMessage) {
